@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+            <table class="table">
+                <tbody><tr>
+                    <th>Id</th><th>Nom</th><th>Prix</th>
+                </tr>
+                <tr *ngFor="let produit of produits">
+                    <td>{{produit.id}}</td>
+                    <td>{{produit.nom}}</td>
+                    <td>{{produit.prix}}</td>
+                </tr>
+               
+            </tbody></table>
+    </div>
+</div>
