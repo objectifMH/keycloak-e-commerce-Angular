@@ -12,7 +12,7 @@ export class KeycloacSecuriteService {
   constructor() { }
 
   async init() {
-    console.log("initialisation du service securite");
+    console.log("initialisation du service securite KeycLoack ... ");
     this.kc = new Keycloak({
       "url":"http://localhost:8080/auth",
       "realm":"e-commerce",
@@ -23,7 +23,7 @@ export class KeycloacSecuriteService {
       //il faut se connecter pour acceder à l'application: 
       //onLoad:'login-required'
 
-      //authenfie l'utilisateur au démarrage : 
+      //authentifie l'utilisateur au démarrage : 
       onLoad:'check-sso',
       promiseType:"native"
     })

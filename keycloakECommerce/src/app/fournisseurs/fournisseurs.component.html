@@ -1,1 +1,19 @@
-<p>fournisseurs works!</p>
+<div class="container">
+    <div class="row errorMessage" *ngIf="errorMessage">
+        {{errorMessage}}
+
+    </div>
+    <div class="row" *ngIf="fournisseurs">
+            <table class="table">
+                <tbody><tr>
+                    <th>Id</th><th>Nom</th><th>eMail</th>
+                </tr>
+                <tr *ngFor="let fournisseur of fournisseurs">
+                    <td>{{fournisseur.id}}</td>
+                    <td>{{fournisseur.nom}}</td>
+                    <td>{{fournisseur.email}}</td>
+                </tr>
+               
+            </tbody></table>
+    </div>
+</div>
