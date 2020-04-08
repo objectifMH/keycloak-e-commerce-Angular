@@ -25,9 +25,9 @@ export class FournisseursComponent implements OnInit {
     this.fs.getFournisseurs()
       .subscribe(
         fournisseurs => {
-          console.log("%s %O", "Mes fournisseurs : ", fournisseurs);
           this.fournisseurs = fournisseurs['_embedded']['fournisseurs'];
-          console.log(this.fournisseurs);
+          
+          console.log("%s %O", "Mes fournisseurs : ", this.fournisseurs);
         },
         err => {
           console.log("%s %O", "Pas de fournisseurs " , err);
